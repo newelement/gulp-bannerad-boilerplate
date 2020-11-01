@@ -6,3 +6,97 @@
 	position: relative;
 	overflow: hidden;
 }
+
+/*
+SOME STUFF TO GET STARTED 
+*/
+
+.logo{
+	position: absolute;
+	top: 24px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	z-index: 1;
+}
+
+.bi-line{
+	position: absolute;
+	top: 84px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	z-index: 1;
+}
+
+.button{
+	position: absolute;
+	top: 156px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	z-index: 1;
+}
+
+.window{
+	width: 254px;
+	height: 356px;
+	border: 5px solid #fff;
+	position: absolute;
+	bottom: 24px; 
+	left: 50%;
+	transform: translateX(-50%);
+	background-image: url('../images/kitchen.png'); // Image does not exist in this sample
+	background-position: center left;
+	background-repeat: no-repeat;
+	
+	z-index: 2;
+	overflow: hidden;
+}
+
+
+.animate{
+	
+	/* 
+	NAME, 
+	DURATION, 
+	TIMING FUNCTION, 
+	DELAY, 
+	FILL MODE (forwards - The element will retain the style values that is set by the last keyframe)
+	*/
+	
+	.logo{
+		animation: fadeIn .6s ease-in .5s forwards;
+	}
+	
+	.bi-line{
+		animation: fadeIn .6s ease-in 1.4s forwards;
+	}
+	
+	.button{
+		animation: fadeIn .6s ease-in 2.3s forwards;
+	}
+	
+	.window{
+		animation: panOver 2.6s ease-in 2.5s forwards;
+	}
+	
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes panOver{
+	0%{
+		background-position: center left;
+	}
+	100%{
+		background-position: center right;
+	}
+}
